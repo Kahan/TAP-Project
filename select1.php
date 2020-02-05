@@ -12,6 +12,7 @@ setcookie('name', mysqli_real_escape_string($link, $_REQUEST['name']), time() + 
 setcookie('email', mysqli_real_escape_string($link, $_REQUEST['email']), time() + (86400 * 30), "/");
 setcookie('phone', mysqli_real_escape_string($link, $_REQUEST['phone']), time() + (86400 * 30), "/");
 setcookie('city', mysqli_real_escape_string($link, $_REQUEST['city']), time() + (86400 * 30), "/");
+header("Location:selection2.php");
 
 // $name = mysqli_real_escape_string($link, $_REQUEST['email']);
 // $email = mysqli_real_escape_string($link, $_REQUEST['email']);
@@ -20,7 +21,7 @@ setcookie('city', mysqli_real_escape_string($link, $_REQUEST['city']), time() + 
 
 // if(mysqli_query($link, $sql)){
 //     echo "Records added successfully.";
-    header("Location:selection2.php");
+    
 //  } else{
 //      echo "ERROR: Could not able to execute $sql. " . mysqli_error($link);
 //  }
