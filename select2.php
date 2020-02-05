@@ -21,14 +21,48 @@ $school = mysqli_real_escape_string($link, $_REQUEST['school']);
 $email = $_COOKIE['email'];
 $phone = $_COOKIE['phone'];
 $city = $_COOKIE['city'];
-
-$sql = "INSERT INTO applicants (sr, name, email, phone, city, club, school, interests, why) VALUES ('', '$name', '$email', '$phone', '$city', '$club', '$school', '$interests', '$why')";
-if(mysqli_query($link, $sql)){
-     echo "Records added successfully.";
-     header("Location:index.html");
-  } else{
+ if($city == "mumbai" or $city == "pune"){
+    $sql = "INSERT INTO applicants (sr, name, email, phone, city, club, school, interests, why) VALUES ('', '$name', '$email', '$phone', '$city', '$club', '$school', '$interests', '$why')";
+    if(mysqli_query($link, $sql)){
+        echo "<script type='text/javascript'>
+        if (confirm('application registered!')) {
+            window.location = 'index.html';
+        }
+        else {
+            window.location = 'index.html';
+        }
+        </script>";
+    } else{
       echo "ERROR: Could not able to execute $sql. " . mysqli_error($link);
-  }
+    }
+} else{
+    echo "<script type='text/javascript'>
+            if (confirm('you are not eligible!')) {
+                window.location = 'index.html';
+            }
+            else {
+                window.location = 'index.html';
+            }
+            </script>";
+}
+//  {
+//     echo 'inside if';
+//     echo '<script type="text/javascript">';
+//     echo ' alert("not eligible")';  
+//     echo '</script>'; 
+//     header("Location:index.html");
+// // }
+// // else {
+//     $sql = "INSERT INTO applicants (sr, name, email, phone, city, club, school, interests, why) VALUES ('', '$name', '$email', '$phone', '$city', '$club', '$school', '$interests', '$why')";
+//     if(mysqli_query($link, $sql)){
+//      echo "Records added successfully.";
+//      header("Location:index.html");
+//     } else{
+//       echo "ERROR: Could not able to execute $sql. " . mysqli_error($link);
+//     }
+// }
+
+
 
 mysqli_close($link);
 ?>

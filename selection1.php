@@ -31,18 +31,9 @@
                 <input type="tel" class="form-control" id="phone" name="phone">
             </div>
 
-            <label>City</label>
-            <div class="form-check">
-                <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="Mumbai" name="city">
-                <label class="form-check-label" for="exampleRadios1">
-                  Mumbai
-                </label>
-              </div>
-              <div class="form-check" style="margin-bottom: 10px;">
-                <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="Pune" name="city">
-                <label class="form-check-label" for="exampleRadios2">
-                  Pune
-                </label>
+          <div class="form-group">
+            <label for="city">City</label>
+                <input type="text" class="form-control" id="city" name="city">
               </div>
             <button type="submit" class="btn btn-primary">Submit</button>
         </form>
