@@ -22,6 +22,7 @@ echo "<th>Club</th>";
 echo "<th>School</th>";
 echo "<th>Interest</th>";
 echo "<th>Why</th>";
+echo "<th>Grade</th>";
 echo "</tr>";
 echo "<tr>";
 echo "<td>" . $name . "</td>";
@@ -30,6 +31,16 @@ echo "<td>" . $club . "</td>";
 echo "<td>" . $school . "</td>";
 echo "<td>" . $interest . "</td>";
 echo "<td>" . $why . "</td>";
+echo '<td><form action="addgrade.php" method="post">
+        <select name="grade">
+        <option>A</option>
+        <option>B</option>
+        <option>C</option>        
+        </select>
+        <button type="submit" class="btn btn-primary">+</button>
+      </form></td>';
 echo "</tr>";
 echo "</table>";
+
+echo ""
 ?>
