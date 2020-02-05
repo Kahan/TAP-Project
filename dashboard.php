@@ -61,6 +61,8 @@
     <option value="15">1000</option>
   </select>
   <input class="btn btn-primary" type="button" value="Next" id="submit" onclick="next()" />
+  <label for="ok">Show Selected Applicants:</label>
+  <input class="btn btn-primary" type="button" value="OK" id="ok" onclick="forward()    " />
 
 </form>
 

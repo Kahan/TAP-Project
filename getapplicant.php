@@ -1,12 +1,14 @@
 <?php
-$mysqli = new mysqli("localhost", "root", "", "tap");
-if($mysqli->connect_error) {
-  exit('Could not connect');
+$link = mysqli_connect("localhost", "root", "123", "tap");
+ 
+// Check connection
+if($link === false){
+    die("ERROR: Could not connect. " . mysqli_connect_error());
 }
 
 $sql = "SELECT name, city, club, school, interests, why FROM applicants WHERE Sr = ?";
 
-$stmt = $mysqli->prepare($sql);
+$stmt = $link->prepare($sql);
 $stmt->bind_param("s", $_GET['q']);
 $stmt->execute();
 $stmt->store_result();

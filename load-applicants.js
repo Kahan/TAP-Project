@@ -24,3 +24,7 @@ function previous() {
     count--;
     showCustomer(count);
 }
+
+function forward() {
+    window.location = 'selected_applicants.php';
+}
