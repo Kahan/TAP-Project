@@ -6,7 +6,7 @@ h1{
 }
 
 .button {
-  background-color: #4CAF50;
+  background-color: seagreen;
   border: none;
   color: white;
   padding: 15px 32px;
@@ -17,11 +17,15 @@ h1{
   margin:auto;
   cursor: pointer;
   text-decoration: none;
+  border-radius: 5px;
   
 }
 
 .button:hover{
     background-color: red;
+    text-decoration: none;
+    border-radius: 5px;
+    color: white;
 }
 
 .container1{
