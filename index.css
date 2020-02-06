@@ -6,43 +6,15 @@ h1{
 }
 
 .button {
-  background-color: lightseagreen;
-  text-decoration: none;
-  border: none;
-  color: white;
-  padding: 15px 32px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
   margin:auto;
-  cursor: pointer;
-  border-radius: 10px;
-  ;
-  
 }
-
-.button:hover{
-    background-color: red;
-    text-decoration: none;
-    color: white;
-    
-}
-
-.container1{
-    background-color: white;
+.inner-container{
     border: none;
     color: white;
     padding: 15px 32px;
     text-align: center;
-    text-decoration: none;
-    
-    font-size: 16px;
     margin: auto;
     width: 40%;
-
-    height: 140px;
-    cursor: pointer;   
 }
 
 label{
@@ -57,5 +29,9 @@ p{
         padding: 10px;
         margin: auto;
         color: black;
+}
 
+.register{
+    border-bottom: 1px solid rgba(128, 128, 128, 0.5);
+    padding-bottom: 20px ;
 }

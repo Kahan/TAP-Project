@@ -1,6 +1,6 @@
 <?php
 
-$link = mysqli_connect("localhost", "root", "123", "tap");
+$link = mysqli_connect("localhost", "root", "", "tap");
  
 // Check connection
 if($link === false){

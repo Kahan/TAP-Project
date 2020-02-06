@@ -9,74 +9,73 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
         integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
         table{
-            width: 80%;
-            margin: 5%
+            width: 100%;
+            margin:5% auto;
         }
         th,td{
             border: 1px solid;
             text-align: left;
-            padding: 15px;
-            height: 50px
+            padding: 10px;
+            
+        }
+        form .form-group{
+            display: flex;
+            justify-content: center;
+        }
+        #applicant-dropbox{
+            margin: 0 1%;
+            text-align: center;
+            text-align-last: center;
+        }
+        main.container{
+            padding: 5%
+        }
+        .drop-grade{
+            margin-right: 5px
         }
     </style>
     </head>
 
-<body>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <div class="container">
-            <a class="navbar-brand" href="#">Animated Dropdown</a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav ml-auto">
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
-                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            Click Me!
-                        </a>
-                        <!-- Here's the magic. Add the .animate and .slide-in classes to your .dropdown-menu and you're all set! -->
-                        <div class="dropdown-menu dropdown-menu-right animate slideIn" aria-labelledby="navbarDropdown">
-                            <a class="dropdown-item" href="#">Action</a>
-                            <a class="dropdown-item" href="#">Another action</a>
-                            <div class="dropdown-divider"></div>
-                            <a class="dropdown-item" href="#">Something else here</a>
-                        </div>
-                    </li>
-                </ul>
+        <body class="bg-light">
+        <div class="jumbotron jumbotron-fluid">
+            <div class="container" style="text-align: center">
+                <h1 class="display-4">Grade Applicants</h1>
             </div>
         </div>
-    </nav>
 
-    <form action=""> 
-  
-  <input class="btn btn-primary" type="button" value="Prev" id="submit" onclick="previous()" />
-  <select name="customers" onchange="showCustomer(this.value)">
-    <option value="">Select an applicant:</option>
-    <option value="1">1</option>
-    <option value="10">500</option>
-    <option value="15">1000</option>
-  </select>
-  <input class="btn btn-primary" type="button" value="Next" id="submit" onclick="next()" />
+            <main class="container">
+                <form action="">             
+                    <div class="form-group">
+                        <button class="btn btn-primary btn-sm" type="button" id="previous">Previous</button>
+                        <select id='applicant-dropbox' name="applicants" onchange="showCustomer(this.value)">
+                            <option value="">Select an applicant:</option>
+                            <option value="1">1</option>
+                            <option value="10">500</option>
+                            <option value="15">1000</option>
+                        </select>
+                        <button class="btn btn-primary btn-sm" type="button" id="next">Next</button>
+                    </div>
 
-</form>
+                    <div class="form-group">
+                        <div id="txtHint">Customer info will be listed here...</div>
+                    </div>
+        
+                    <div class="form-group">
+                        <input class="btn btn-outline-primary btn-sm" type="button" value=" Select Applicants" id="show-applicants" onclick="forward()" />
+                    </div>
+                    <div class="form-group">
+                        <a class="btn btn-outline-primary btn-sm" href="admin-dashboard.php" onclick="forward()">Dashboard</a>
+                    </div>
+                </form>
+            </main>
 
-<br>
-<div id="txtHint">Customer info will be listed here...</div>
-
-    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
-        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
-        crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
-        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
-        crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
-        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
-        crossorigin="anonymous"></script>
-    <script src="load-applicants.js"></script>
-</body>
+            <script src="load-applicants.js"></script>
+        </body>
 
 </html>
