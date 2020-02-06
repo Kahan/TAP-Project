@@ -1,4 +1,28 @@
 let count;
+let previous = document.querySelector('#previous');
+let next = document.querySelector('#next');
+
+next.addEventListener('click', () => {
+    count++;
+    showCustomer(count);
+})
+previous.addEventListener('click', () => {
+    count--;
+    showCustomer(count);
+})
+
+function net() {
+
+}
+function prev() {
+    count--;
+    showCustomer(count);
+}
+
+function forward() {
+    window.location = 'select_applicants.php';
+}
+
 function showCustomer(str) {
     var xhttp;
     count = str;
@@ -16,15 +40,3 @@ function showCustomer(str) {
     xhttp.send();
 }
 
-function next() {
-    count++;
-    showCustomer(count);
-}
-function previous() {
-    count--;
-    showCustomer(count);
-}
-
-function forward() {
-    window.location = 'selected_applicants.php';
-}
