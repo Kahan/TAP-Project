@@ -44,10 +44,16 @@
 
         <div class="form-group">
             <input class="btn btn-primary" type="submit" value="Next" id="submit" />
-        </div>    
+        </div>      
+        </form>
 
+        <form action="sendmail.php" method="POST">
+        <div class="form-group">
+            <input class="btn btn-primary" type="submit" value="send mail" id="submit" />
+        </div>
         </form>
     </div>
     <script src="load_selected_applicants.js"></script>
+    <!-- <script src="sendmail.php"></script> -->
 </body>
 </html>

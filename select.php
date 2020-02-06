@@ -17,12 +17,14 @@ if($link === false){
 }
 
 $select = mysqli_real_escape_string($link, $_REQUEST['select']);
-$sr = $_COOKIE['sr'];
-$sql = "UPDATE applicants SET selected = '$select' WHERE sr = '$sr' ";
+$school1 = mysqli_real_escape_string($link, $_REQUEST['school1']);
+$sr = $_POST['add'];
+    echo $sr;
+$sql = "UPDATE applicants SET selected = '$select', school = '$school1' WHERE sr = '$sr' ";
 
 if (mysqli_query($link, $sql) === TRUE) {
     echo "<script type='text/javascript'>
-            window.location = 'load_selected_applicants.php';
+            window.location = 'selected_applicants.php'
         </script>";
 } else {
     echo "Error updating record: " . mysqli_error($link);
