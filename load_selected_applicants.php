@@ -20,7 +20,7 @@
 </head>
 <body>
 <?php
-$con = new mysqli("localhost","root","123","tap");
+$con = new mysqli("localhost","root","","tap");
 
 if ($con -> connect_errno) {
     echo "Failed to connect to MySQL: " . $con -> connect_error;

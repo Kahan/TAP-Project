@@ -1,6 +1,6 @@
 <?php
 
-$link = mysqli_connect("localhost", "root", "123", "tap");
+$link = mysqli_connect("localhost", "root", "", "tap");
  
 // Check connection
 if($link === false){
@@ -37,7 +37,7 @@ $city = $_COOKIE['city'];
     }
 } else{
     echo "<script type='text/javascript'>
-            if (confirm('you are not eligible!')) {
+            if (confirm('Not Available in your region but thank you for your support.')) {
                 window.location = 'index.html';
             }
             else {
